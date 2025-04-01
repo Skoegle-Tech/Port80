@@ -10,7 +10,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    
+    res.send({query:req?.query})
 })
 
 
